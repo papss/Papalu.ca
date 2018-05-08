@@ -10,5 +10,10 @@
 
   <body>
     <%= yield %>
+
+    <!-- log in check -->
+    <% if logged_in? %>
+      <p> logged in as <%= current_user.name %> </p>
+    <% end %>
   </body>
 </html>
