@@ -1,13 +1,23 @@
-<h2>
-  <%= @article.title %>
-</h2>
+<div class="blog-container">
+  <div class="index-container">
+    <%= react_component("Article", {
+                          id: @article.id,
+                          title: @article.title,
+                          body: @article.body
+                        }) %>
 
-<h3>
-  <%= @article.author %>
-</h3>
+    <% if logged_in? %>
+      <%= react_component("AdminControl", { articleId: @article.id }) %>
+    <% end %>
 
-<p>
-  <%= @article.body %>
-</p>
+    <p>
+        <%=
+          link_to 'Delete', article_path(@article),
+          method: :delete,
+          data: { confirm: 'Are you sure?' }
+        %>
+    </p>
 
-<%= link_to 'Back', articles_path %> 
+    <%= link_to 'Back', articles_path %>
+  </div>
+</div>

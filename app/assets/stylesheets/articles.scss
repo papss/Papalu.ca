@@ -16,3 +16,15 @@
   margin:      auto;
   background:  #F4F7F5;
 }
+
+// modularize these styles:
+.article {
+  padding: 10px;
+}
+
+// AdminControl component:
+
+.article-admin-cntrl {
+  padding: 10px;
+  background: pink;
+}
