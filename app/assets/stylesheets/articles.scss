@@ -11,15 +11,33 @@
 }
 
 .index-container {
-  width:       55%;
+  width:       45%;
   height:      100%;
   margin:      auto;
   background:  #F4F7F5;
 }
 
+.article-container {
+  margin: 20px 0 30px 0;
+}
+
 // modularize these styles:
 .article {
-  padding: 10px;
+  // padding: 10px;
+}
+
+.article-header {
+
+  font-size: 3rem;
+}
+
+.article-body {
+  margin-top: 10px;
+
+
+  font-size: 1.25rem;
+  line-height: 1.55;
+  text-align: justify;
 }
 
 // AdminControl component:
